@@ -13,6 +13,11 @@ body{
 
 }
 
+section:not(.hero-section){
+    margin-top: 175px;
+}
+
+
 header {
     background: linear-gradient(-90deg, #031540 65%, #fff 35%);
     width: 100%;
@@ -116,7 +121,6 @@ header label{
     outline: 20px solid #031540;
 }
 .hero-content{
-    text-align: right;
     color: #fff;
 }
 .hero-content h2{
@@ -145,12 +149,12 @@ header label{
     background-image: linear-gradient(aqua,aqua);
     background-repeat: no-repeat;
     -webkit-background-clip: text;
-    background-position: -320px 0;
+    background-position: -600px 0;
     animation: animateText 3s linear infinite;
 }
 @keyframes animateText {
     0%, 95%,100%{
-        background-position: -320px 0;
+        background-position: -600px 0;
     }
     65%,85%{
         background-position: 0 0 ;
@@ -202,15 +206,50 @@ header label{
     font-size: 25px;
 }
 
+.preview .row{
+    background-color: #031540;
+    height: 50vh;
+}
 .preview div{
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content:center ;
     align-items: center;
+    position: relative;
+    left: 25px;
 }
-.preview .aboutme-card{
+
+.cardme {
+    background-color: transparent;
+    color:#fff ;
+}
+
+.card-cont {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px;
+}
+
+.cont-photo{
+
+}
+
+.cont-photo > img {
+    width: 376px;
+}
+
+.row.cards-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+    left: 0px;
+}
+/* .preview .aboutme-card{
     width: 50%;
-    background: linear-gradient(-90deg, #fff 30%, rgb(5, 90, 160) 70%) ;
+    background: white ;
     text-align: left;
     font-size: 18px;
     font-weight: 600;
@@ -219,11 +258,26 @@ header label{
     transition: .5s;
 }
 
+.experience-card{
+    width: 50%;
+    display: flex;
+    background-color: white ;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px #031540;
+    transition: .5s;
+} */
+
+.experience-card:hover{
+    color:#031540;
+    border-color: aqua;
+    box-shadow: 0px 0px 10px aqua;
+}
 .preview .aboutme-card:hover{
     color:#031540;
     border-color: aqua;
     box-shadow: 0px 0px 10px aqua;
-    transform: scale(1.1);
 }
 
 .title{
@@ -306,15 +360,18 @@ margin-top: 10px;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    background-color: #031540;
+    padding: 40px 0;
 }
 .fa-java{
+    background-color: #fff;
     color: #031540;
     display: flex;
     height: 8rem;
     width: 8rem;
     border-radius: 32px;
     box-shadow: rgb(0, 0, 0) 1px 1px 2px;
-    margin-bottom: 3rem;
     justify-content: center;
     padding: 10px;
     flex-direction: column;
@@ -323,13 +380,13 @@ margin-top: 10px;
 }
 
 .fa-css3-alt{
+    background-color: #fff;
     color: #2090e9;
     display: flex;
     height: 8rem;
     width: 8rem;
     border-radius: 32px;
     box-shadow: rgb(0, 0, 0) 1px 1px 2px;
-    margin-bottom: 3rem;
     justify-content: center;
     padding: 1rem;
     flex-direction: column;
@@ -337,13 +394,13 @@ margin-top: 10px;
     margin-left: 3rem;
 }
 .fa-html5{
+    background-color: #fff;
     color: #ff0a0a;
     display: flex;
     height: 8rem;
     width: 8rem;
     border-radius: 32px;
     box-shadow: rgb(0, 0, 0) 1px 1px 2px;
-    margin-bottom: 3rem;
     justify-content: center;
     padding: 1rem;
     flex-direction: column;
@@ -352,13 +409,13 @@ margin-top: 10px;
 }
 
 .fa-js{
+    background-color: #fff;
     color: #9fa116;
     display: flex;
     height: 8rem;
     width: 8rem;
     border-radius: 32px;
     box-shadow: rgb(0, 0, 0) 1px 1px 2px;
-    margin-bottom: 3rem;
     justify-content: center;
     padding: 1rem;
     flex-direction: column;
@@ -366,13 +423,13 @@ margin-top: 10px;
     margin-left: 3rem;
 }
 .fa-react{
+    background-color: #fff;
     color: #27dadd;
     display: flex;
     height: 8rem;
     width: 8rem;
     border-radius: 32px;
     box-shadow: rgb(0, 0, 0) 1px 1px 2px;
-    margin-bottom: 3rem;
     justify-content: center;
     padding: 1rem;
     flex-direction: column;
@@ -381,13 +438,13 @@ margin-top: 10px;
 }
 
 .fa-figma{
+    background-color: #fff;
     color: #031540;
     display: flex;
     height: 8rem;
     width: 8rem;
     border-radius: 32px;
     box-shadow: rgb(0, 0, 0) 1px 1px 2px;
-    margin-bottom: 3rem;
     justify-content: center;
     padding: 1rem;
     flex-direction: column;
@@ -395,32 +452,7 @@ margin-top: 10px;
     margin-left: 3rem;
 }
 
-.experience{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0px;
-}
 
-.experience-card{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(-90deg, #fff 30%, rgb(5, 90, 160) 70%) ;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 600;
-    box-shadow: 0px 0px 10px #031540;
-    transition: .5s;
-}
-.experience-card:hover{
-    color:#031540;
-    border-color: aqua;
-    box-shadow: 0px 0px 10px aqua;
-    transform: scale(1.1);
-}
 
 footer{
     background-color:#031540 ;
@@ -429,6 +461,7 @@ footer{
     justify-content: space-between;
     align-items: center;
     padding: 10px 170px;
+    margin-top: 175px;
 }
 footer p{
     color: #fff;
