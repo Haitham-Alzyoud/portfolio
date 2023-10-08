@@ -224,6 +224,12 @@ header label{
     background-color: transparent;
     color:#fff ;
 }
+.cardme:hover {
+    -webkit-text-stroke: .5px aqua;
+
+
+}
+
 
 .card-cont {
     display: flex;
@@ -232,9 +238,6 @@ header label{
     padding: 10px;
 }
 
-.cont-photo{
-
-}
 
 .cont-photo > img {
     width: 376px;
@@ -245,31 +248,10 @@ header label{
     flex-direction: row;
     flex-wrap: nowrap;
     position: relative;
-    left: 0px;
-}
-/* .preview .aboutme-card{
-    width: 50%;
-    background: white ;
-    text-align: left;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 10px;
-    box-shadow: 0px 0px 10px #031540;
-    transition: .5s;
 }
 
-.experience-card{
-    width: 50%;
-    display: flex;
-    background-color: white ;
-    text-align: left;
-    font-size: 18px;
-    font-weight: 600;
-    box-shadow: 0px 0px 10px #031540;
-    transition: .5s;
-} */
 
-.experience-card:hover{
+/* .experience-card:hover{
     color:#031540;
     border-color: aqua;
     box-shadow: 0px 0px 10px aqua;
@@ -278,7 +260,7 @@ header label{
     color:#031540;
     border-color: aqua;
     box-shadow: 0px 0px 10px aqua;
-}
+} */
 
 .title{
     display: flex;
@@ -487,6 +469,5 @@ footer p{
     .experience-card{
         width: 370px;
     }
+   
 }
-
-
